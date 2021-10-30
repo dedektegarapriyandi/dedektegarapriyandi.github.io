@@ -3,3 +3,17 @@ $darkBlue: #1E3163;
 $lightBlue: #2D46B9;
 $pink: #F037A5;
 $white: #F8F8F8;
+
+// mixin
+@mixin flexBox($direction, $justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin container($maxWidth, $padding) {
+    max-width:$maxWidth;
+    padding: $padding;
+    margin: auto;
+}

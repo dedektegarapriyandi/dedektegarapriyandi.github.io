@@ -1,20 +1,23 @@
 @use "../variables"as var;
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     height: 10vh;
+
+    .navbar-container {
+        @include var.flexBox(row, space-between, center);
+        @include var.container(1450px, 0 3rem);
+    }
 
     a {
         color: var.$white;
         text-decoration: none;
+        display: block;
     }
 
     .active {
         &::after {
             content: "";
-            width: 90%;
+            width: 94%;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -28,7 +31,7 @@
     }
 
     .navbar-menu {
-        display: flex;
+        @include var.flexBox(row, flex-start, flex-start);
         height: 100%;
         list-style: none;
 
@@ -40,16 +43,12 @@
 
             &:hover::after {
                 content: "";
-                width: 90%;
+                width: 94%;
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 border: 2px solid var.$pink;
                 border-radius: 10px;
-            }
-
-            a {
-                display: block;
             }
         }
     }
