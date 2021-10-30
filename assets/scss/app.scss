@@ -21,3 +21,10 @@ body {
     background-repeat: no-repeat;
     color: var.$white;
 }
+
+.btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: .9rem;
+}

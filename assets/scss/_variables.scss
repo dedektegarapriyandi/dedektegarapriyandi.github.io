@@ -17,3 +17,16 @@ $white: #F8F8F8;
     padding: $padding;
     margin: auto;
 }
+
+@mixin borderBottom($color, $width) {
+    &::after {
+        content: "";
+        width: $width;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border: 2px solid $color;
+        border-radius: 10px;
+        box-shadow: 0 -2px 10px rgba($color: $color, $alpha: .5);
+    }
+}
