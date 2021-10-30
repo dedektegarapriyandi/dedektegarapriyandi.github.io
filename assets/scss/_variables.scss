@@ -18,15 +18,17 @@ $white: #F8F8F8;
     margin: auto;
 }
 
-@mixin borderBottom($color, $width) {
+@mixin borderBottom($color, $width, $animation: none) {
     &::after {
         content: "";
-        width: $width;
         position: absolute;
+        width: $width;
         bottom: 0;
         left: 0;
+        transform: translateX(-2px);
         border: 2px solid $color;
         border-radius: 10px;
         box-shadow: 0 -2px 10px rgba($color: $color, $alpha: .5);
+        animation: $animation;
     }
 }

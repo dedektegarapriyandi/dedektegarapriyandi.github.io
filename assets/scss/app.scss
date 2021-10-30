@@ -1,5 +1,8 @@
 // variables
-@use "./variables" as var;
+@use "./variables"as var;
+
+// animation
+@use "./animations";
 
 // components
 @use "./components/navbar";

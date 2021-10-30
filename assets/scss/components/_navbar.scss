@@ -15,7 +15,7 @@
     }
 
     .active {
-        @include var.borderBottom(var.$pink, 94%)
+        @include var.borderBottom(var.$pink, 100%);
     }
 
     .navbar-brand {
@@ -31,12 +31,8 @@
             position: relative;
             line-height: 10vh;
             margin: 0 .8rem;
-            padding: 0 .7rem;
+            padding: 0 .5rem;
             font-size: 1rem;
-
-            &:hover {
-                @include var.borderBottom(var.$pink, 94%)
-            }
         }
     }
 

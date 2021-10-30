@@ -1,0 +1,30 @@
+@use "./variables"as var;
+
+.border-expand {
+    @include var.borderBottom(var.$pink, 100%, borderExpand .2s ease);
+}
+
+.border-collapse {
+    @include var.borderBottom(var.$pink, 100%, borderCollapse .2s ease);
+}
+
+@keyframes borderExpand {
+    from {
+        width: 0;
+    }
+
+    to {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes borderCollapse {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
