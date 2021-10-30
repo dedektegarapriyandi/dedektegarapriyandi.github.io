@@ -1,0 +1,56 @@
+@use "../variables"as var;
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+
+    a {
+        color: var.$white;
+        text-decoration: none;
+    }
+
+    .active {
+        &::after {
+            content: "";
+            width: 90%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border: 2px solid var.$pink;
+            border-radius: 10px;
+        }
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .navbar-menu {
+        display: flex;
+        height: 100%;
+        list-style: none;
+
+        .navbar-link {
+            position: relative;
+            line-height: 10vh;
+            margin: 0 1rem;
+            padding: 0 .7rem;
+
+            &:hover::after {
+                content: "";
+                width: 90%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                border: 2px solid var.$pink;
+                border-radius: 10px;
+            }
+
+            a {
+                display: block;
+            }
+        }
+    }
+}
