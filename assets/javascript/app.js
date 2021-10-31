@@ -12,6 +12,6 @@ navLinks.forEach((link) => {
 
         setTimeout(() => {
             this.classList.remove("border-collapse");
-        }, 200);
+        }, 180);
     });
 });;
