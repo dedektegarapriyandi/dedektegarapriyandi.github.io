@@ -1,0 +1,67 @@
+@use "../variables"as var;
+
+.movies {
+    color: var.$white;
+    margin-top: 2rem;
+
+    .movies-container {
+        @include var.container(1450px, 0 3rem);
+    }
+
+    .nav-movies {
+        height: 80px;
+        @include var.flexBox(row, space-between, center);
+
+        .title>* {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            @include var.flexBox(row, start, start);
+            list-style: none;
+            height: 100%;
+            line-height: 80px;
+
+            .menu-item {
+                position: relative;
+                margin: 0 1rem;
+                height: 100%;
+
+                a {
+                    display: block;
+                    text-decoration: none;
+                    color: var.$white;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .movies-form {
+            @include var.flexBox(row, space-between, center);
+            width: 250px;
+            height: 50px;
+            border-left: 1px solid rgba(221, 221, 221, 0.3);
+
+            .search-icon {
+                line-height: 0;
+                padding: 0 1.3rem;
+                font-size: 1rem;
+            }
+
+            .movies-search-input {
+                width: 200px;
+                font-size: .8rem;
+                background-color: transparent;
+                outline: none;
+                border: none;
+                color: var.$white;
+
+                &::placeholder {
+                    color: var.$white;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}

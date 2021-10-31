@@ -15,10 +15,6 @@
         display: block;
     }
 
-    .active {
-        @include var.borderBottom(var.$pink, 100%);
-    }
-
     .navbar-brand {
         font-size: 1.5rem;
     }

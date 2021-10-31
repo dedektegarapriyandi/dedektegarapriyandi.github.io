@@ -7,6 +7,7 @@
 // components
 @use "./components/navbar";
 @use "./components/header";
+@use "./components/movies-section";
 
 // font
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
@@ -31,4 +32,8 @@ body {
     border: none;
     outline: none;
     font-size: .9rem;
+}
+
+.nav-active {
+    @include var.borderBottom(var.$pink, 100%);
 }
