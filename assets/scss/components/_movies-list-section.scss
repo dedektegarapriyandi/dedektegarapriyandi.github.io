@@ -1,0 +1,14 @@
+@use "../variables" as var;
+
+.movies-list {
+    background-color: var.$darkBlue;
+    padding: 4rem 0;
+    margin-top: 1.5rem;
+
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 3rem;
+        @include var.container(1450px, 0 3rem);
+    }
+}

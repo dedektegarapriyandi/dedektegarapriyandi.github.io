@@ -2,9 +2,10 @@
 
 .header {
     color: var.$white;
-
+    padding-top: 10vh;
+    
     .header-content {
-        height: 400px;
+        height: 580px;
         @include var.flexBox(column, center, center);
         @include var.container(1450px, 0 3rem);
 

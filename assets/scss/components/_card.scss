@@ -1,0 +1,52 @@
+@use "../variables"as var;
+
+.card {
+    width: 100%;
+    transition: .3s;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    .card-img {
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: .3s;
+
+            &:hover {
+                box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+            }
+        }
+
+        .ratings {
+            position: absolute;
+            bottom: 3px;
+            right: -10px;
+            background-color: rgb(208, 208, 32);
+            padding: .1rem .8rem;
+            border-radius: 20px;
+            font-size: .9rem;
+            color: black;
+            font-weight: 500;
+        }
+    }
+
+    .year-category {
+        font-size: .8rem;
+        font-weight: 400;
+        margin-top: .8rem;
+        color: var.$darkGreen;
+    }
+
+    .title {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-top: .5rem;
+    }
+}

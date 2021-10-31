@@ -1,7 +1,10 @@
 @use "../variables"as var;
 
 .navbar {
-    height: 10vh;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 70px;
     border-bottom: 1px solid rgba(221, 221, 221, 0.1);
 
     .navbar-container {
@@ -26,7 +29,7 @@
 
         .navbar-link {
             position: relative;
-            line-height: 10vh;
+            line-height: 70px;
             margin: 0 .8rem;
             padding: 0 .5rem;
             font-size: 1rem;
