@@ -4,12 +4,9 @@
     color: var.$white;
     margin-top: 2rem;
 
-    .movies-container {
-        @include var.container(1450px, 0 3rem);
-    }
-
     .nav-movies {
         height: 80px;
+        @include var.container(1450px, 0 3rem);
         @include var.flexBox(row, space-between, center);
 
         .title>* {
