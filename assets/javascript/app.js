@@ -59,19 +59,44 @@ const getAPI = (url) => {
 }
 
 const getMovies = () => {
-    const menuItem = document.querySelectorAll(".menu-item");
+    const menuItem = document.querySelector(".movies .nav-menu");
 
-    menuItem.forEach(async menu => {
-        if (menu.innerText.toLowerCase() == "avengers") {
+    menuItem.addEventListener("click", async function (e) {
+        e.preventDefault();
+
+        // active indicator
+        const listMenu = document.querySelectorAll(".menu-item");
+        listMenu.forEach(menu => {
+            if (menu.classList.contains("nav-active")) {
+                menu.classList.remove("nav-active");
+            }
+        });
+
+        // fetch data when menu clicked
+        const activeClass = e.target.parentElement.classList;
+        const menuTitle = e.target.innerText.toLowerCase();
+        if (menuTitle == "avengers") {
+            activeClass.add("nav-active");
+
             try {
-                const moviesData = await getAPI("http://www.omdbapi.com/?apikey=666c83eb&s=avengers");
-
-                console.log(moviesData)
+                moviesData = await getAPI("http://www.omdbapi.com/?apikey=666c83eb&s=avengers");
                 moviesCard(moviesData);
             } catch (err) {
                 console.log(err);
             }
         }
+        if (menuTitle == "harry potter") {
+            activeClass.add("nav-active");
+
+            try {
+                moviesData = await getAPI("http://www.omdbapi.com/?apikey=666c83eb&s=harry potter");
+                moviesCard(moviesData);
+            } catch (err) {
+                console.log(err);
+            }
+        }
+
+
     });
 }
 
