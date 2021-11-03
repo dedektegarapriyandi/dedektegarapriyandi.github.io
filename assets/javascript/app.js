@@ -3,7 +3,7 @@ const getAPI = (url) => {
     return fetch(url)
         .then(response => {
             if (!response.status == 200) {
-                throw alert(response.status);
+                throw response.status;
             }
 
             return response.json();
@@ -11,7 +11,7 @@ const getAPI = (url) => {
         })
         .then(response => {
             if (response.Response === "False") {
-                throw alert(response.Error);
+                throw response.Error;
             }
 
             return response;
@@ -81,9 +81,8 @@ const getMovies = () => {
             try {
                 moviesData = await getAPI("http://www.omdbapi.com/?apikey=666c83eb&s=avengers");
                 moviesCard(moviesData.Search);
-                console.log(moviesData)
             } catch (err) {
-                console.log(err);
+                alert(err)
             }
         }
         if (menuTitle == "harry potter") {
@@ -93,7 +92,7 @@ const getMovies = () => {
                 moviesData = await getAPI("http://www.omdbapi.com/?apikey=666c83eb&s=harry potter");
                 moviesCard(moviesData.Search);
             } catch (err) {
-                console.log(err);
+                alert(err)
             }
         }
         if (menuTitle == "thor") {
@@ -103,7 +102,7 @@ const getMovies = () => {
                 moviesData = await getAPI("http://www.omdbapi.com/?apikey=666c83eb&s=thor");
                 moviesCard(moviesData.Search);
             } catch (err) {
-                console.log(err);
+                alert(err)
             }
         }
         if (menuTitle == "captain america") {
@@ -113,7 +112,7 @@ const getMovies = () => {
                 moviesData = await getAPI("http://www.omdbapi.com/?apikey=666c83eb&s=captain america");
                 moviesCard(moviesData.Search);
             } catch (err) {
-                console.log(err);
+                alert(err)
             }
         }
     });
