@@ -118,4 +118,19 @@ const getMovies = () => {
     });
 }
 
+const searchMovie = async (e) => {
+    e.preventDefault();
+
+    const searchInput = document.querySelector(".movies-search-input");
+    
+    try {
+        const movie = await getAPI("http://www.omdbapi.com/?apikey=666c83eb&s=" + searchInput.value);
+        moviesCard(movie.Search);
+    }catch(err) {
+        alert(err);
+    }
+
+}
+
 window.addEventListener("DOMContentLoaded", getMovies);
+document.querySelector(".search-movie-btn").addEventListener("click", searchMovie);
